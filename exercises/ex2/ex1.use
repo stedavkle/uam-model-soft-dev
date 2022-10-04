@@ -1,0 +1,63 @@
+model system
+
+-- classes
+
+class Conference
+constraints
+  inv: papers->forAll(p | p.authors->asSet()->excludesAll(chairs->asSet()))
+  inv: chairs->forAll(c | c.student = false)
+end
+
+class User
+attributes
+  name : String
+  affiliation : String
+  mail : String
+  registered : Boolean
+  student : Boolean
+end
+
+class Review
+attributes
+  score : Integer
+  comments: Collection(String)
+constraints
+  inv: self.score < 6 and self.score >= 0
+  inv: reviewers->forAll(r | r.student = false)
+end
+
+class Paper
+attributes
+  title : String
+  abs : String
+  body : String
+constraints
+  inv : review.reviewers->asSet()->excludesAll(authors->asSet())
+  inv : authors->includes(correspondent)
+end
+
+-- associations
+association chairsOfConf between
+  Conference[*] role conference
+  User[1..2] role chairs
+end
+association papersOfConf between
+  Conference[1] role conference
+  Paper[1..*] role papers
+end
+association authorsOfPaper between
+  Paper[*] role paper
+  User[1..*] role authors
+end
+association correspondingAuthor between
+  Paper[*] role cPaper
+  User[1] role correspondent
+ end
+association reviewOfPaper between
+  Paper[1] role paper
+  Review[1] role review
+end
+association authorsOfReview between
+  Review[1] role review
+  User[3] role reviewers
+end
