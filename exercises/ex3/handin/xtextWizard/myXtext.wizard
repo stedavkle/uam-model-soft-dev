@@ -1,0 +1,33 @@
+Wizard:
+	title "NewProject"
+	pages [
+		init Page:	textfields [TextField:
+									minLength 0
+									maxLength 0
+									label Label: text "Name" 
+									]
+					buttons [
+						ButtonNavigate: nextPage "01" label Label: text "Next",
+						ButtonClose:	wizard "NewProject" label Label: text "Cancel"
+					],
+			Page:	checkbox selected Checkbox:
+			 								label Label: text "create source folder"
+					buttons [
+						ButtonReturn:	previousPage "00" label Label: text "Back",
+						ButtonNavigate: nextPage "02" nextPageAlt "04" label Label: text "Next",
+						ButtonClose:	wizard "NewProject" label Label: text "Cancel"
+					],
+			Page:	textfields [TextField:
+									minLength 0
+									maxLength 0
+									label Label: text "Folder" 
+								]
+					buttons [
+						ButtonReturn: previousPage "01" label Label: text "Back",
+						ButtonClose:	wizard "NewProject" label Label: text "Finish"
+						],
+			Page:	buttons [
+						ButtonReturn: previousPage "01" label Label: text "Back",
+						ButtonClose:	wizard "NewProject" label Label: text "Finish"
+					]
+			]

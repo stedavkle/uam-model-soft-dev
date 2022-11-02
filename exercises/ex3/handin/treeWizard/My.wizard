@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard:Wizard xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wizard="/ex2/ex2.ecore" title="New Project">
+  <pages init="true">
+    <textfields input="bla">
+      <label text="Name"/>
+    </textfields>
+    <buttons xsi:type="wizard:ButtonClose" wizard="/">
+      <label text="Cancel"/>
+    </buttons>
+    <buttons xsi:type="wizard:ButtonNavigate" nextPage="//@pages.3">
+      <label text="Next"/>
+    </buttons>
+  </pages>
+  <pages>
+    <checkbox selected="true">
+      <label text="create src folder"/>
+    </checkbox>
+    <buttons xsi:type="wizard:ButtonReturn" previousPage="//@pages.0">
+      <label text="Back"/>
+    </buttons>
+    <buttons xsi:type="wizard:ButtonNavigate" nextPage="//@pages.2" nextPageAlt="//@pages.3">
+      <label text="Next"/>
+    </buttons>
+    <buttons xsi:type="wizard:ButtonClose" wizard="/">
+      <label text="Cancel"/>
+    </buttons>
+  </pages>
+  <pages>
+    <textfields input="bla">
+      <label text="Folder"/>
+    </textfields>
+    <buttons xsi:type="wizard:ButtonReturn" previousPage="//@pages.3">
+      <label text="Back"/>
+    </buttons>
+    <buttons xsi:type="wizard:ButtonClose" wizard="/">
+      <label text="Finish"/>
+    </buttons>
+  </pages>
+  <pages>
+    <buttons xsi:type="wizard:ButtonReturn" previousPage="//@pages.3">
+      <label text="Back"/>
+    </buttons>
+    <buttons xsi:type="wizard:ButtonClose" wizard="/">
+      <label text="Finish"/>
+    </buttons>
+  </pages>
+</wizard:Wizard>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ex2/src" modelPluginID="ex2" modelName="Ex2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ex2.ecore</foreignModel>
+  <genPackages prefix="Wizard" disposableProviderFactory="true" ecorePackage="ex2.ecore#/">
+    <genClasses ecoreClass="ex2.ecore#//Wizard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//Wizard/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Wizard/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//Page/init"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Page/textfields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Page/checkbox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Page/buttons"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//TextField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//TextField/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//TextField/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//TextField/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//TextField/label"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//Checkbox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//Checkbox/selected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Checkbox/label"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//Label/text"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ex2.ecore#//Button">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ex2.ecore#//Button/label"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ex2.ecore#//Button/myPage"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//ButtonNavigate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ex2.ecore#//ButtonNavigate/nextPage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ex2.ecore#//ButtonNavigate/nextPageAlt"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//ButtonReturn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ex2.ecore#//ButtonReturn/previousPage"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//ButtonShow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ex2.ecore#//ButtonShow/message"/>
+    </genClasses>
+    <genClasses ecoreClass="ex2.ecore#//ButtonClose">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ex2.ecore#//ButtonClose/wizard"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

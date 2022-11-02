@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wizard" nsURI="/ex2/ex2.ecore" nsPrefix="wizard">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Wizard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pages" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Page" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Page">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="oneInitPage returnButtonsInv notOnlyMessageButton noRetNavThenClose noSimilarButtons"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="oneInitPage" value="Page.allInstances()->one(init)"/>
+      <details key="returnButtonsInv" value="not init and buttons->select(b | b.oclIsTypeOf(ButtonReturn))->size() &lt;= 1 or buttons->select(b | b.oclIsTypeOf(ButtonReturn))->size() &lt; 1"/>
+      <details key="notOnlyMessageButton" value="buttons->select(b | b.oclIsTypeOf(ButtonShow))->size() &lt; buttons->size()"/>
+      <details key="noRetNavThenClose" value="(buttons->select(b | b.oclIsTypeOf(ButtonReturn) or b.oclIsTypeOf(ButtonNavigate))->size() = 0)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;implies buttons->one(b | b.oclIsTypeOf(ButtonClose))"/>
+      <details key="noSimilarButtons" value="buttons->isUnique(b | b.label.text)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="init" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textfields" ordered="false"
+        upperBound="-1" eType="#//TextField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="checkbox" eType="#//Checkbox"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buttons" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Button" containment="true" eOpposite="#//Button/myPage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextField">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="minMaxLength"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="minMaxLength" value="(input.size() >= minLength) and (input.size() &lt;= maxLength) or (minLength = 0 and maxLength = 0)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minLength" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxLength" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" lowerBound="1" eType="#//Label"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Checkbox">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" lowerBound="1" eType="#//Label"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Button" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="maxLabelLength"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="maxLabelLength" value="label.text.size() &lt;= 10"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" lowerBound="1" eType="#//Label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="myPage" lowerBound="1"
+        eType="#//Page" eOpposite="#//Page/buttons"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonNavigate" eSuperTypes="#//Button">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="myPageDifferNextPage"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="myPageDifferNextPage" value="self.myPage &lt;> self.nextPage and self.myPage &lt;> self.nextPageAlt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextPage" lowerBound="1"
+        eType="#//Page"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextPageAlt" eType="#//Page"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonReturn" eSuperTypes="#//Button">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousPage" lowerBound="1"
+        eType="#//Page"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonShow" eSuperTypes="#//Button">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonClose" eSuperTypes="#//Button">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wizard" lowerBound="1"
+        eType="#//Wizard"/>
+  </eClassifiers>
+</ecore:EPackage>
