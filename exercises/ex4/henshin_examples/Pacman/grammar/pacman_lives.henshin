@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_lgX38JYDEeWSAe50fnUPXw">
+  <imports href="http://www.Pacman.org#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_m-ifEJYDEeWSAe50fnUPXw" name="PacmanMoves">
+    <lhs xmi:id="_m_MmYJYDEeWSAe50fnUPXw" name="Lhs">
+      <nodes xmi:id="_wswQ0JYDEeWSAe50fnUPXw" name="t1" incoming="_CaGcUJYEEeWSAe50fnUPXw" outgoing="_2nvokJYDEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_zTBvgJYDEeWSAe50fnUPXw" name="t2" incoming="_2nvokJYDEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_45Y7EJYDEeWSAe50fnUPXw" name="p" outgoing="_CaGcUJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Pacman"/>
+      </nodes>
+      <edges xmi:id="_2nvokJYDEeWSAe50fnUPXw" source="_wswQ0JYDEeWSAe50fnUPXw" target="_zTBvgJYDEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile/adjacent"/>
+      </edges>
+      <edges xmi:id="_CaGcUJYEEeWSAe50fnUPXw" source="_45Y7EJYDEeWSAe50fnUPXw" target="_wswQ0JYDEeWSAe50fnUPXw" index="">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_3mGeAJdSEeWGjvqZEH5-vg">
+        <left xsi:type="henshin:Not" xmi:id="_zld6IZdSEeWGjvqZEH5-vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_zld6IpdSEeWGjvqZEH5-vg">
+            <conclusion xmi:id="_zld6I5dSEeWGjvqZEH5-vg" name="1">
+              <nodes xmi:id="_zld6JJdSEeWGjvqZEH5-vg" name="t1" incoming="_zld6KJdSEeWGjvqZEH5-vg" outgoing="_zld6K5dSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_zld6JpdSEeWGjvqZEH5-vg" name="p" outgoing="_zld6KJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Pacman"/>
+              </nodes>
+              <nodes xmi:id="_zld6KZdSEeWGjvqZEH5-vg" name="t2" incoming="_zld6K5dSEeWGjvqZEH5-vg _yYvcEJYEEeWSAe50fnUPXw">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_xd6LgJYEEeWSAe50fnUPXw" name="g" outgoing="_yYvcEJYEEeWSAe50fnUPXw">
+                <type href="http://www.Pacman.org#//Ghost"/>
+              </nodes>
+              <edges xmi:id="_zld6KJdSEeWGjvqZEH5-vg" source="_zld6JpdSEeWGjvqZEH5-vg" target="_zld6JJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+              <edges xmi:id="_zld6K5dSEeWGjvqZEH5-vg" source="_zld6JJdSEeWGjvqZEH5-vg" target="_zld6KZdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile/adjacent"/>
+              </edges>
+              <edges xmi:id="_yYvcEJYEEeWSAe50fnUPXw" source="_xd6LgJYEEeWSAe50fnUPXw" target="_zld6KZdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_zld6JZdSEeWGjvqZEH5-vg" origin="_wswQ0JYDEeWSAe50fnUPXw" image="_zld6JJdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_zld6J5dSEeWGjvqZEH5-vg" origin="_45Y7EJYDEeWSAe50fnUPXw" image="_zld6JpdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_zld6KpdSEeWGjvqZEH5-vg" origin="_zTBvgJYDEeWSAe50fnUPXw" image="_zld6KZdSEeWGjvqZEH5-vg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_3mGeAZdSEeWGjvqZEH5-vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_3mGeApdSEeWGjvqZEH5-vg">
+            <conclusion xmi:id="_3mGeA5dSEeWGjvqZEH5-vg" name="2">
+              <nodes xmi:id="_3mGeBJdSEeWGjvqZEH5-vg" name="t1" incoming="_3mGeCJdSEeWGjvqZEH5-vg _4ObCQJdSEeWGjvqZEH5-vg" outgoing="_3mGeC5dSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_3mGeBpdSEeWGjvqZEH5-vg" name="p" outgoing="_3mGeCJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Pacman"/>
+              </nodes>
+              <nodes xmi:id="_3mGeCZdSEeWGjvqZEH5-vg" name="t2" incoming="_3mGeC5dSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_3Kk_oJdSEeWGjvqZEH5-vg" outgoing="_4ObCQJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Ghost"/>
+              </nodes>
+              <edges xmi:id="_3mGeCJdSEeWGjvqZEH5-vg" source="_3mGeBpdSEeWGjvqZEH5-vg" target="_3mGeBJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+              <edges xmi:id="_3mGeC5dSEeWGjvqZEH5-vg" source="_3mGeBJdSEeWGjvqZEH5-vg" target="_3mGeCZdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile/adjacent"/>
+              </edges>
+              <edges xmi:id="_4ObCQJdSEeWGjvqZEH5-vg" source="_3Kk_oJdSEeWGjvqZEH5-vg" target="_3mGeBJdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_3mGeBZdSEeWGjvqZEH5-vg" origin="_wswQ0JYDEeWSAe50fnUPXw" image="_3mGeBJdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_3mGeB5dSEeWGjvqZEH5-vg" origin="_45Y7EJYDEeWSAe50fnUPXw" image="_3mGeBpdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_3mGeCpdSEeWGjvqZEH5-vg" origin="_zTBvgJYDEeWSAe50fnUPXw" image="_3mGeCZdSEeWGjvqZEH5-vg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_m_MmYZYDEeWSAe50fnUPXw" name="Rhs">
+      <nodes xmi:id="_wswQ0ZYDEeWSAe50fnUPXw" name="t1" outgoing="_2nvokZYDEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_zTBvgZYDEeWSAe50fnUPXw" name="t2" incoming="_2nvokZYDEeWSAe50fnUPXw _HHYDwJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_45ZiIJYDEeWSAe50fnUPXw" name="p" outgoing="_HHYDwJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Pacman"/>
+      </nodes>
+      <edges xmi:id="_2nvokZYDEeWSAe50fnUPXw" source="_wswQ0ZYDEeWSAe50fnUPXw" target="_zTBvgZYDEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile/adjacent"/>
+      </edges>
+      <edges xmi:id="_HHYDwJYEEeWSAe50fnUPXw" source="_45ZiIJYDEeWSAe50fnUPXw" target="_zTBvgZYDEeWSAe50fnUPXw" index="">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_wswQ0pYDEeWSAe50fnUPXw" origin="_wswQ0JYDEeWSAe50fnUPXw" image="_wswQ0ZYDEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_zTBvgpYDEeWSAe50fnUPXw" origin="_zTBvgJYDEeWSAe50fnUPXw" image="_zTBvgZYDEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_45ZiIZYDEeWSAe50fnUPXw" origin="_45Y7EJYDEeWSAe50fnUPXw" image="_45ZiIJYDEeWSAe50fnUPXw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_du6RUJYEEeWSAe50fnUPXw" name="GhostMoves">
+    <lhs xmi:id="_du9UoJYEEeWSAe50fnUPXw" name="Lhs">
+      <nodes xmi:id="_gV4TkJYEEeWSAe50fnUPXw" name="t1" incoming="_kPfCYJYEEeWSAe50fnUPXw" outgoing="_jizikJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_hrBhkJYEEeWSAe50fnUPXw" name="t2" incoming="_jizikJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_ilgz4JYEEeWSAe50fnUPXw" name="g" outgoing="_kPfCYJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Ghost"/>
+      </nodes>
+      <edges xmi:id="_jizikJYEEeWSAe50fnUPXw" source="_gV4TkJYEEeWSAe50fnUPXw" target="_hrBhkJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile/adjacent"/>
+      </edges>
+      <edges xmi:id="_kPfCYJYEEeWSAe50fnUPXw" source="_ilgz4JYEEeWSAe50fnUPXw" target="_gV4TkJYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_P4V54JdTEeWGjvqZEH5-vg">
+        <left xsi:type="henshin:Not" xmi:id="_6465o5dSEeWGjvqZEH5-vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_6465pJdSEeWGjvqZEH5-vg">
+            <conclusion xmi:id="_6465pZdSEeWGjvqZEH5-vg" name="1">
+              <nodes xmi:id="_6465ppdSEeWGjvqZEH5-vg" name="t1" incoming="_6465qpdSEeWGjvqZEH5-vg" outgoing="_6465rZdSEeWGjvqZEH5-vg _7H_rMJYEEeWSAe50fnUPXw">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_6465qJdSEeWGjvqZEH5-vg" name="g" outgoing="_6465qpdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Ghost"/>
+              </nodes>
+              <nodes xmi:id="_6465q5dSEeWGjvqZEH5-vg" name="t2" incoming="_6465rZdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_3OzzIJYEEeWSAe50fnUPXw" name="t" incoming="_7H_rMJYEEeWSAe50fnUPXw _MWp70JdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_J8-HoJdTEeWGjvqZEH5-vg" name="p" outgoing="_MWp70JdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Pacman"/>
+              </nodes>
+              <edges xmi:id="_6465qpdSEeWGjvqZEH5-vg" source="_6465qJdSEeWGjvqZEH5-vg" target="_6465ppdSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+              <edges xmi:id="_6465rZdSEeWGjvqZEH5-vg" source="_6465ppdSEeWGjvqZEH5-vg" target="_6465q5dSEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile/adjacent"/>
+              </edges>
+              <edges xmi:id="_7H_rMJYEEeWSAe50fnUPXw" source="_6465ppdSEeWGjvqZEH5-vg" target="_3OzzIJYEEeWSAe50fnUPXw">
+                <type href="http://www.Pacman.org#//Tile/adjacent"/>
+              </edges>
+              <edges xmi:id="_MWp70JdTEeWGjvqZEH5-vg" source="_J8-HoJdTEeWGjvqZEH5-vg" target="_3OzzIJYEEeWSAe50fnUPXw">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_6465p5dSEeWGjvqZEH5-vg" origin="_gV4TkJYEEeWSAe50fnUPXw" image="_6465ppdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_6465qZdSEeWGjvqZEH5-vg" origin="_ilgz4JYEEeWSAe50fnUPXw" image="_6465qJdSEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_6465rJdSEeWGjvqZEH5-vg" origin="_hrBhkJYEEeWSAe50fnUPXw" image="_6465q5dSEeWGjvqZEH5-vg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_P4V54ZdTEeWGjvqZEH5-vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_P4V54pdTEeWGjvqZEH5-vg">
+            <conclusion xmi:id="_P4V545dTEeWGjvqZEH5-vg" name="2">
+              <nodes xmi:id="_P4V55JdTEeWGjvqZEH5-vg" name="t1" incoming="_P4V56JdTEeWGjvqZEH5-vg _UUptIJdTEeWGjvqZEH5-vg" outgoing="_P4V565dTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_P4V55pdTEeWGjvqZEH5-vg" name="g" outgoing="_P4V56JdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Ghost"/>
+              </nodes>
+              <nodes xmi:id="_P4V56ZdTEeWGjvqZEH5-vg" name="t2" incoming="_P4V565dTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile"/>
+              </nodes>
+              <nodes xmi:id="_PcrRkJdTEeWGjvqZEH5-vg" outgoing="_UUptIJdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Pacman"/>
+              </nodes>
+              <edges xmi:id="_P4V56JdTEeWGjvqZEH5-vg" source="_P4V55pdTEeWGjvqZEH5-vg" target="_P4V55JdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+              <edges xmi:id="_P4V565dTEeWGjvqZEH5-vg" source="_P4V55JdTEeWGjvqZEH5-vg" target="_P4V56ZdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Tile/adjacent"/>
+              </edges>
+              <edges xmi:id="_UUptIJdTEeWGjvqZEH5-vg" source="_PcrRkJdTEeWGjvqZEH5-vg" target="_P4V55JdTEeWGjvqZEH5-vg">
+                <type href="http://www.Pacman.org#//Player/at"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_P4V55ZdTEeWGjvqZEH5-vg" origin="_gV4TkJYEEeWSAe50fnUPXw" image="_P4V55JdTEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_P4V555dTEeWGjvqZEH5-vg" origin="_ilgz4JYEEeWSAe50fnUPXw" image="_P4V55pdTEeWGjvqZEH5-vg"/>
+            <mappings xmi:id="_P4V56pdTEeWGjvqZEH5-vg" origin="_hrBhkJYEEeWSAe50fnUPXw" image="_P4V56ZdTEeWGjvqZEH5-vg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_du9UoZYEEeWSAe50fnUPXw" name="Rhs">
+      <nodes xmi:id="_gV4TkZYEEeWSAe50fnUPXw" name="t1" outgoing="_jizikZYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_hrBhkZYEEeWSAe50fnUPXw" name="t2" incoming="_jizikZYEEeWSAe50fnUPXw _ke-P4JYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_ilgz4ZYEEeWSAe50fnUPXw" name="g" outgoing="_ke-P4JYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Ghost"/>
+      </nodes>
+      <edges xmi:id="_jizikZYEEeWSAe50fnUPXw" source="_gV4TkZYEEeWSAe50fnUPXw" target="_hrBhkZYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile/adjacent"/>
+      </edges>
+      <edges xmi:id="_ke-P4JYEEeWSAe50fnUPXw" source="_ilgz4ZYEEeWSAe50fnUPXw" target="_hrBhkZYEEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_gV4TkpYEEeWSAe50fnUPXw" origin="_gV4TkJYEEeWSAe50fnUPXw" image="_gV4TkZYEEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_hrBhkpYEEeWSAe50fnUPXw" origin="_hrBhkJYEEeWSAe50fnUPXw" image="_hrBhkZYEEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_ilgz4pYEEeWSAe50fnUPXw" origin="_ilgz4JYEEeWSAe50fnUPXw" image="_ilgz4ZYEEeWSAe50fnUPXw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_BWDI4JYFEeWSAe50fnUPXw" name="Gameover">
+    <parameters xmi:id="_0zVu4JYHEeWSAe50fnUPXw" name="c">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_BWE-EJYFEeWSAe50fnUPXw" name="Lhs">
+      <nodes xmi:id="_C9_XEJYFEeWSAe50fnUPXw" name="t" incoming="_XSGUAJYGEeWSAe50fnUPXw _f960oJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_HHS5UJYGEeWSAe50fnUPXw" name="g" incoming="_VyVxcJYGEeWSAe50fnUPXw" outgoing="_XSGUAJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_Ux0voJYGEeWSAe50fnUPXw" name="game" outgoing="_VyVxcJYGEeWSAe50fnUPXw _gdSRMJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Game"/>
+      </nodes>
+      <nodes xmi:id="_cPSmwJYGEeWSAe50fnUPXw" name="p" description="" incoming="_gdSRMJYGEeWSAe50fnUPXw" outgoing="_f960oJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Pacman"/>
+        <attributes xmi:id="_ynrIkJYHEeWSAe50fnUPXw" value="c">
+          <type href="http://www.Pacman.org#//Pacman/lives"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_VyVxcJYGEeWSAe50fnUPXw" source="_Ux0voJYGEeWSAe50fnUPXw" target="_HHS5UJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Game/players"/>
+      </edges>
+      <edges xmi:id="_XSGUAJYGEeWSAe50fnUPXw" source="_HHS5UJYGEeWSAe50fnUPXw" target="_C9_XEJYFEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <edges xmi:id="_f960oJYGEeWSAe50fnUPXw" source="_cPSmwJYGEeWSAe50fnUPXw" target="_C9_XEJYFEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <edges xmi:id="_gdSRMJYGEeWSAe50fnUPXw" source="_Ux0voJYGEeWSAe50fnUPXw" target="_cPSmwJYGEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Game/players"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_BWE-EZYFEeWSAe50fnUPXw" name="Rhs">
+      <nodes xmi:id="_C9_-IJYFEeWSAe50fnUPXw" name="t">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_Ux0voZYGEeWSAe50fnUPXw" name="game">
+        <type href="http://www.Pacman.org#//Game"/>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_-jWQYJYHEeWSAe50fnUPXw" name="lives zero" conditionText="c==0"/>
+    <mappings xmi:id="_C9_-IZYFEeWSAe50fnUPXw" origin="_C9_XEJYFEeWSAe50fnUPXw" image="_C9_-IJYFEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_Ux0vopYGEeWSAe50fnUPXw" origin="_Ux0voJYGEeWSAe50fnUPXw" image="_Ux0voZYGEeWSAe50fnUPXw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_B6BRQJYIEeWSAe50fnUPXw" name="DecreaseLives">
+    <parameters xmi:id="_funQgJYKEeWSAe50fnUPXw" name="d">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_B6DtgJYIEeWSAe50fnUPXw" name="Lhs">
+      <nodes xmi:id="_Ei0fgJYIEeWSAe50fnUPXw" name="t" incoming="_LTQ4kJYIEeWSAe50fnUPXw _Lh_4IJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_IQZkgJYIEeWSAe50fnUPXw" name="g" outgoing="_Lh_4IJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_JXkn8JYIEeWSAe50fnUPXw" name="p" outgoing="_LTQ4kJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Pacman"/>
+        <attributes xmi:id="_T5JwUJYIEeWSAe50fnUPXw" value="d">
+          <type href="http://www.Pacman.org#//Pacman/lives"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_OIAREJYIEeWSAe50fnUPXw" name="c">
+        <type href="http://www.Pacman.org#//Castle"/>
+      </nodes>
+      <edges xmi:id="_LTQ4kJYIEeWSAe50fnUPXw" source="_JXkn8JYIEeWSAe50fnUPXw" target="_Ei0fgJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <edges xmi:id="_Lh_4IJYIEeWSAe50fnUPXw" source="_IQZkgJYIEeWSAe50fnUPXw" target="_Ei0fgJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_B6EUkJYIEeWSAe50fnUPXw" name="Rhs">
+      <nodes xmi:id="_Ei1GkJYIEeWSAe50fnUPXw" name="t" incoming="_LTQ4kZYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_IQZkgZYIEeWSAe50fnUPXw" name="g" outgoing="_P_bFsJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_JXkn8ZYIEeWSAe50fnUPXw" name="p" outgoing="_LTQ4kZYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Pacman"/>
+        <attributes xmi:id="_T5MzoJYIEeWSAe50fnUPXw" value="d-1">
+          <type href="http://www.Pacman.org#//Pacman/lives"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_OIAREZYIEeWSAe50fnUPXw" name="c" incoming="_P_bFsJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Castle"/>
+      </nodes>
+      <edges xmi:id="_LTQ4kZYIEeWSAe50fnUPXw" source="_JXkn8ZYIEeWSAe50fnUPXw" target="_Ei1GkJYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+      <edges xmi:id="_P_bFsJYIEeWSAe50fnUPXw" source="_IQZkgZYIEeWSAe50fnUPXw" target="_OIAREZYIEeWSAe50fnUPXw">
+        <type href="http://www.Pacman.org#//Player/at"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_U5LC4JYIEeWSAe50fnUPXw" name="Alive" conditionText="d>0"/>
+    <mappings xmi:id="_Ei1GkZYIEeWSAe50fnUPXw" origin="_Ei0fgJYIEeWSAe50fnUPXw" image="_Ei1GkJYIEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_IQZkgpYIEeWSAe50fnUPXw" origin="_IQZkgJYIEeWSAe50fnUPXw" image="_IQZkgZYIEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_JXkn8pYIEeWSAe50fnUPXw" origin="_JXkn8JYIEeWSAe50fnUPXw" image="_JXkn8ZYIEeWSAe50fnUPXw"/>
+    <mappings xmi:id="_OIAREpYIEeWSAe50fnUPXw" origin="_OIAREJYIEeWSAe50fnUPXw" image="_OIAREZYIEeWSAe50fnUPXw"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_If4wEOvYEei-3ZLjiJLipA" name="loses" description="" subUnits="_B6BRQJYIEeWSAe50fnUPXw _BWDI4JYFEeWSAe50fnUPXw"/>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_PUDykOvYEei-3ZLjiJLipA" name="move" subUnits="_du6RUJYEEeWSAe50fnUPXw _m-ifEJYDEeWSAe50fnUPXw"/>
+  <units xsi:type="henshin:PriorityUnit" xmi:id="_n8wKIOvZEei-3ZLjiJLipA" name="step" subUnits="_If4wEOvYEei-3ZLjiJLipA _PUDykOvYEei-3ZLjiJLipA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_dpG6oOvaEei-3ZLjiJLipA" name="main" subUnit="_n8wKIOvZEei-3ZLjiJLipA"/>
+</henshin:Module>

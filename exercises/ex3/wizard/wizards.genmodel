@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/wizard/src" modelPluginID="wizard" modelName="Wizards"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>wizards.ecore</foreignModel>
+  <genPackages prefix="Wizards" disposableProviderFactory="true" ecorePackage="wizards.ecore#/">
+    <genClasses ecoreClass="wizards.ecore#//Wizard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//Wizard/title"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wizards.ecore#//Wizard/initialPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wizards.ecore#//Wizard/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//Page">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wizards.ecore#//Page/checkbox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wizards.ecore#//Page/buttons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wizards.ecore#//Page/textFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//Page/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//Page/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//TextField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//TextField/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//TextField/maxLength"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//CheckBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//CheckBox/labelSelected"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="wizards.ecore#//Button">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wizards.ecore#//Button/targetPage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wizards.ecore#//Button/otherTargetPage"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//NavButton">
+      <genOperations ecoreOperation="wizards.ecore#//NavButton/navigate"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//ReturnButton">
+      <genOperations ecoreOperation="wizards.ecore#//ReturnButton/return"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//ShowButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//ShowButton/message"/>
+      <genOperations ecoreOperation="wizards.ecore#//ShowButton/show"/>
+    </genClasses>
+    <genClasses ecoreClass="wizards.ecore#//CloseButton">
+      <genOperations ecoreOperation="wizards.ecore#//CloseButton/close"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="wizards.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wizards.ecore#//Field/label"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

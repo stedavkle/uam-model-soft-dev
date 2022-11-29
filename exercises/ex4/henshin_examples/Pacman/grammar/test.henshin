@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_whp-UJdnEeWGjvqZEH5-vg">
+  <imports href="http://www.Pacman.org#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_0krH0JdnEeWGjvqZEH5-vg" name="pacmanMoves">
+    <parameters xmi:id="_QPrPQJdoEeWGjvqZEH5-vg" name="x">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_0k0RwJdnEeWGjvqZEH5-vg" name="Lhs">
+      <nodes xmi:id="_AFaAEJdoEeWGjvqZEH5-vg">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_AZpKsJdoEeWGjvqZEH5-vg">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_FdhUQJdoEeWGjvqZEH5-vg" name="p">
+        <type href="http://www.Pacman.org#//Pacman"/>
+        <attributes xmi:id="_JfDQAJdoEeWGjvqZEH5-vg" value="x">
+          <type href="http://www.Pacman.org#//Pacman/lives"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_0k0RwZdnEeWGjvqZEH5-vg" name="Rhs">
+      <nodes xmi:id="_AFaAEZdoEeWGjvqZEH5-vg">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_AZpKsZdoEeWGjvqZEH5-vg">
+        <type href="http://www.Pacman.org#//Tile"/>
+      </nodes>
+      <nodes xmi:id="_FdhUQZdoEeWGjvqZEH5-vg" name="p">
+        <type href="http://www.Pacman.org#//Pacman"/>
+        <attributes xmi:id="_JfDQAZdoEeWGjvqZEH5-vg" value="x+1">
+          <type href="http://www.Pacman.org#//Pacman/lives"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_AFaAEpdoEeWGjvqZEH5-vg" origin="_AFaAEJdoEeWGjvqZEH5-vg" image="_AFaAEZdoEeWGjvqZEH5-vg"/>
+    <mappings xmi:id="_AZpKspdoEeWGjvqZEH5-vg" origin="_AZpKsJdoEeWGjvqZEH5-vg" image="_AZpKsZdoEeWGjvqZEH5-vg"/>
+    <mappings xmi:id="_FdhUQpdoEeWGjvqZEH5-vg" origin="_FdhUQJdoEeWGjvqZEH5-vg" image="_FdhUQZdoEeWGjvqZEH5-vg"/>
+  </units>
+</henshin:Module>

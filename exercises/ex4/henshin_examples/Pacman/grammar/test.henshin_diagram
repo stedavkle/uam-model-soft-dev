@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_whzvUJdnEeWGjvqZEH5-vg" type="Henshin" name="test.henshin_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_0krH0ZdnEeWGjvqZEH5-vg" type="2001" fontName="Segoe UI" italic="true" lineColor="0">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6bIk45dnEeWGjvqZEH5-vg" source="defaultAction">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6bIk5JdnEeWGjvqZEH5-vg" key="value" value="preserve"/>
+    </eAnnotations>
+    <children xmi:type="notation:DecorationNode" xmi:id="_0krH05dnEeWGjvqZEH5-vg" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_0krH1JdnEeWGjvqZEH5-vg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_AFjxEJdoEeWGjvqZEH5-vg" type="3001" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AFjxEpdoEeWGjvqZEH5-vg" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_AFjxE5doEeWGjvqZEH5-vg" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_AFjxFJdoEeWGjvqZEH5-vg" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_AFjxFZdoEeWGjvqZEH5-vg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_AFjxFpdoEeWGjvqZEH5-vg"/>
+        </children>
+        <element xmi:type="henshin:Node" href="test.henshin#_AFaAEJdoEeWGjvqZEH5-vg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AFjxEZdoEeWGjvqZEH5-vg" x="165" y="111"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_AZpKs5doEeWGjvqZEH5-vg" type="3001" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AZpKtZdoEeWGjvqZEH5-vg" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_AZpKtpdoEeWGjvqZEH5-vg" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_AZpKt5doEeWGjvqZEH5-vg" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_AZpKuJdoEeWGjvqZEH5-vg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_AZpKuZdoEeWGjvqZEH5-vg"/>
+        </children>
+        <element xmi:type="henshin:Node" href="test.henshin#_AZpKsJdoEeWGjvqZEH5-vg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AZpKtJdoEeWGjvqZEH5-vg" x="62" y="111"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_FdqeMJdoEeWGjvqZEH5-vg" type="3001" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_FdqeMpdoEeWGjvqZEH5-vg" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_FdqeM5doEeWGjvqZEH5-vg" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_FdqeNJdoEeWGjvqZEH5-vg" type="7002">
+          <children xmi:type="notation:Node" xmi:id="_JfDQApdoEeWGjvqZEH5-vg" type="3002">
+            <element xmi:type="henshin:Attribute" href="test.henshin#_JfDQAJdoEeWGjvqZEH5-vg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JfDQA5doEeWGjvqZEH5-vg"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_FdqeNZdoEeWGjvqZEH5-vg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_FdqeNpdoEeWGjvqZEH5-vg"/>
+        </children>
+        <element xmi:type="henshin:Node" href="test.henshin#_FdhUQJdoEeWGjvqZEH5-vg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FdqeMZdoEeWGjvqZEH5-vg" x="141" y="21"/>
+      </children>
+    </children>
+    <element xmi:type="henshin:Rule" href="test.henshin#_0krH0JdnEeWGjvqZEH5-vg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0krH0pdnEeWGjvqZEH5-vg" x="115" y="103"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_whzvUZdnEeWGjvqZEH5-vg"/>
+  <element xmi:type="henshin:Module" href="test.henshin#_whp-UJdnEeWGjvqZEH5-vg"/>
+</notation:Diagram>

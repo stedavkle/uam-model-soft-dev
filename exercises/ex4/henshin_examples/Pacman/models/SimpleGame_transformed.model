@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ex:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.Pacman.org">
+  <players xsi:type="ex:Pacman" at="//@board.1" lives="3"/>
+  <players xsi:type="ex:Ghost" at="//@board.2"/>
+  <board adjacent="//@board.2 //@board.1" id="1, 1"/>
+  <board adjacent="//@board.2 //@board.0" id="1, 3"/>
+  <board xsi:type="ex:Castle" adjacent="//@board.0 //@board.1" id="1, 2"/>
+</ex:Game>

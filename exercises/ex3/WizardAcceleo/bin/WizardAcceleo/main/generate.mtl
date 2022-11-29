@@ -1,0 +1,164 @@
+[comment encoding = UTF-8 /]
+[module generate('/wizard/wizards.ecore')]
+
+
+[template public generateElement(aWizard : Wizard)]
+[comment @main/]
+	[file ('/src/main/Main.java', false, 'UTF-8')]
+		package main;
+		
+		import wizard.Wizard;
+		
+		public class Main {
+			public static void main(String[ '[' /][ ']' /] args) {
+				Wizard wizard = new Wizard();
+				wizard.showWizard();
+			}
+		}
+	[/file]
+
+	[file ('/src/wizard/Wizard.java', false, 'UTF-8')]
+		package wizard;
+
+		import java.awt.BorderLayout;
+		import java.awt.CardLayout;
+		import java.awt.GridLayout;
+		
+		import javax.swing.*;
+		import listeners.*;
+		
+		public class Wizard extends JFrame {
+			[for (aPage: Page | aWizard.pages)]
+			final static String [aPage.name.replaceAll(' ', '_').toUpperCase() /] = "[aPage.name /]";
+			[/for]
+	
+			public Wizard () {
+				super ("[aWizard.title/]");
+				
+				JPanel wizard, page, fields, buttons;
+				JButton button;
+				JLabel  label;
+				JTextField text;
+				JCheckBox check;
+
+				// panel containing all pages
+				wizard = new JPanel(new CardLayout());
+				
+				[for (aPage: Page | aWizard.pages)]					
+				// [aPage.name/] of wizard
+
+				// - fields
+				fields  = new JPanel(new GridLayout(0, 2));
+
+				[for (aTextField : TextField | aPage.textFields)]
+				label   = new JLabel("[aTextField.label/]");
+				fields.add(label);
+				text    = new JTextField(10);
+				fields.add(text);
+				[/for]
+				
+				// checkboxes
+				[if (not aPage.checkbox.oclIsUndefined())]
+				label   = new JLabel("[aPage.checkbox.label/]");
+				fields.add(label);
+				check   = new JCheckBox();
+				check.setSelected([aPage.checkbox.labelSelected/]); // to select the checkbox
+				fields.add(check);
+				[/if]
+
+				// - buttons
+				buttons = new JPanel();
+				
+				[for (aButton : Button | aPage.buttons)]
+
+				button  = new JButton("[aButton.label/]");
+				[if (aButton.oclIsTypeOf(NavButton))]
+				[if not aPage.checkbox.oclIsUndefined()]
+				button.addActionListener(e ->{
+						String target = check.isSelected() ? [aButton.otherTargetPage.name.replaceAll(' ', '_').toUpperCase()/] : [aButton.targetPage.name.replaceAll(' ', '_').toUpperCase()/];
+						ChangePageListener listener = new ChangePageListener(wizard, target);
+						listener.actionPerformed(e);});
+				[else]
+				button.addActionListener(new ChangePageListener(wizard, [aButton.targetPage.name.replaceAll(' ', '_').toUpperCase()/]));
+				[/if]
+				[/if]
+				[if (aButton.oclIsTypeOf(ReturnButton))]
+				button.addActionListener(new ChangePageListener(wizard, [aButton.targetPage.name.replaceAll(' ', '_').toUpperCase()/]));
+				[/if]
+				[if (aButton.oclIsTypeOf(ShowButton))]
+				// how do I show a message?
+				[/if]
+				[if (aButton.oclIsTypeOf(CloseButton))]
+				button.addActionListener(new CloseWizardListener(this));
+				[/if]
+				buttons.add(button);
+				[/for]
+
+				// - adding page to wizard
+				page    = new JPanel(new BorderLayout());
+				page.add(fields,   BorderLayout.CENTER);
+				page.add(buttons, BorderLayout.SOUTH);
+				wizard.add(page, [aPage.name.replaceAll(' ', '_').toUpperCase() /]);
+					
+				[/for]
+				// add panel to window
+				getContentPane().add(wizard);
+			}
+			/**
+			 * show wizard
+			 */
+			public void showWizard() {
+				this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				this.pack();
+				this.setVisible(true);
+			}
+		}
+	[/file]
+
+	[file ('/src/listeners/CloseWizardListener.java', false, 'UTF-8')]
+		package listeners;
+		
+		import java.awt.event.ActionEvent;
+		import java.awt.event.ActionListener;
+		import javax.swing.JFrame;
+		
+		public class CloseWizardListener implements ActionListener {
+			private JFrame window;
+			
+			public CloseWizardListener(JFrame window) {
+				this.window = window;
+			}
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				window.setVisible(false);
+				window.dispose();
+			}
+		}
+	[/file]
+	[file ('/src/listeners/ChangePageListener.java', false, 'UTF-8')]
+		package listeners;
+		
+		import java.awt.CardLayout;
+		import java.awt.event.ActionEvent;
+		import java.awt.event.ActionListener;
+		import javax.swing.JPanel;
+		
+		public class ChangePageListener implements ActionListener {
+			private JPanel cards;
+			private CardLayout layout;
+			private String target;
+			
+			public ChangePageListener(JPanel pages, String target) {
+				this.cards  = pages;
+				this.layout = (CardLayout)pages.getLayout();
+				this.target = target;
+			}
+		
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				layout.show(cards, target);
+			}
+		}
+	[/file]
+[/template]

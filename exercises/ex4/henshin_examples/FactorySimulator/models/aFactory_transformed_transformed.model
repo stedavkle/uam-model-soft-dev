@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Factory:Factory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Factory="http://factory.org">
+  <machines xsi:type="Factory:Assembler"/>
+  <machines xsi:type="Factory:Generator"/>
+  <machines xsi:type="Factory:Terminator"/>
+  <conveyors capacity="3" from="//@machines.1" to="//@machines.0"/>
+  <conveyors capacity="2" from="//@machines.0" to="//@machines.2" numParts="1">
+    <parts/>
+  </conveyors>
+</Factory:Factory>

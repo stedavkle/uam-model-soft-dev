@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_K1HZoJFKEeWh--vLJ1DoCQ">
+  <imports href="http://factory.org#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_LwYvEJFKEeWh--vLJ1DoCQ" name="GeneratePart">
+    <parameters xmi:id="_K4dPQJFPEeWh--vLJ1DoCQ" name="x">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_ODKl0JFREeWh--vLJ1DoCQ" name="p0"/>
+    <parameters xmi:id="_ODKl0ZFREeWh--vLJ1DoCQ" name="g0"/>
+    <parameters xmi:id="_ODKl0pFREeWh--vLJ1DoCQ" name="c0"/>
+    <parameters xmi:id="_PlOOcJFREeWh--vLJ1DoCQ" name="y" description="">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_LxQRwJFKEeWh--vLJ1DoCQ" name="Lhs">
+      <nodes xmi:id="_OJSgIJFKEeWh--vLJ1DoCQ" name="g0" incoming="_T_3R8JFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Generator"/>
+      </nodes>
+      <nodes xmi:id="_Q5c6oJFKEeWh--vLJ1DoCQ" name="c0" outgoing="_T_3R8JFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_g0dJUJFLEeWh--vLJ1DoCQ" value="x">
+          <type href="http://factory.org#//Conveyor/capacity"/>
+        </attributes>
+        <attributes xmi:id="_f-jNUJFREeWh--vLJ1DoCQ" value="y">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_T_3R8JFKEeWh--vLJ1DoCQ" source="_Q5c6oJFKEeWh--vLJ1DoCQ" target="_OJSgIJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/from"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_LxQRwZFKEeWh--vLJ1DoCQ" name="Rhs">
+      <nodes xmi:id="_OJTHMJFKEeWh--vLJ1DoCQ" name="g0" incoming="_T_35AJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Generator"/>
+      </nodes>
+      <nodes xmi:id="_Q5c6oZFKEeWh--vLJ1DoCQ" name="c0" outgoing="_T_35AJFKEeWh--vLJ1DoCQ _W0QsMJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_g0eXcJFLEeWh--vLJ1DoCQ" value="x">
+          <type href="http://factory.org#//Conveyor/capacity"/>
+        </attributes>
+        <attributes xmi:id="_f-kbcJFREeWh--vLJ1DoCQ" value="y+1">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_V2rpoJFKEeWh--vLJ1DoCQ" name="p0" incoming="_W0QsMJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Part"/>
+      </nodes>
+      <edges xmi:id="_T_35AJFKEeWh--vLJ1DoCQ" source="_Q5c6oZFKEeWh--vLJ1DoCQ" target="_OJTHMJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/from"/>
+      </edges>
+      <edges xmi:id="_W0QsMJFKEeWh--vLJ1DoCQ" source="_Q5c6oZFKEeWh--vLJ1DoCQ" target="_V2rpoJFKEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/parts"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_GHb3oJFMEeWh--vLJ1DoCQ" name="cpacity" conditionText="x > y"/>
+    <mappings xmi:id="_OJUVUJFKEeWh--vLJ1DoCQ" origin="_OJSgIJFKEeWh--vLJ1DoCQ" image="_OJTHMJFKEeWh--vLJ1DoCQ"/>
+    <mappings xmi:id="_Q5dhsJFKEeWh--vLJ1DoCQ" origin="_Q5c6oJFKEeWh--vLJ1DoCQ" image="_Q5c6oZFKEeWh--vLJ1DoCQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_JQPM4JFSEeWh--vLJ1DoCQ" name="TransformPart">
+    <parameters xmi:id="_rCWcgJFSEeWh--vLJ1DoCQ" name="n">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_skjPEJFSEeWh--vLJ1DoCQ" name="m">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_9WilkJFSEeWh--vLJ1DoCQ" name="cap">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_JQUFYJFSEeWh--vLJ1DoCQ" name="Lhs">
+      <nodes xmi:id="_MqRDwJFSEeWh--vLJ1DoCQ" name="a" incoming="_QymLEJFSEeWh--vLJ1DoCQ _VLp2AJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Assembler"/>
+      </nodes>
+      <nodes xmi:id="_PUcLAJFSEeWh--vLJ1DoCQ" name="c" outgoing="_QymLEJFSEeWh--vLJ1DoCQ _ZniLcJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_k2sLgJFSEeWh--vLJ1DoCQ" value="n">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_RgfL0JFSEeWh--vLJ1DoCQ" name="c1" outgoing="_VLp2AJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_oUIiwJFSEeWh--vLJ1DoCQ" value="m">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+        <attributes xmi:id="_6b9DwJFSEeWh--vLJ1DoCQ" value="cap">
+          <type href="http://factory.org#//Conveyor/capacity"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_XRgIMJFSEeWh--vLJ1DoCQ" name="p1" incoming="_ZniLcJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Part"/>
+      </nodes>
+      <edges xmi:id="_QymLEJFSEeWh--vLJ1DoCQ" source="_PUcLAJFSEeWh--vLJ1DoCQ" target="_MqRDwJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/to"/>
+      </edges>
+      <edges xmi:id="_VLp2AJFSEeWh--vLJ1DoCQ" source="_RgfL0JFSEeWh--vLJ1DoCQ" target="_MqRDwJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/from"/>
+      </edges>
+      <edges xmi:id="_ZniLcJFSEeWh--vLJ1DoCQ" source="_PUcLAJFSEeWh--vLJ1DoCQ" target="_XRgIMJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/parts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_JQUFYZFSEeWh--vLJ1DoCQ" name="Rhs">
+      <nodes xmi:id="_MqRDwZFSEeWh--vLJ1DoCQ" name="a" incoming="_QymLEZFSEeWh--vLJ1DoCQ _VLqdEJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Assembler"/>
+      </nodes>
+      <nodes xmi:id="_PUdZIJFSEeWh--vLJ1DoCQ" name="c" outgoing="_QymLEZFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_k2sLgZFSEeWh--vLJ1DoCQ" value="n-1">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Rgfy4JFSEeWh--vLJ1DoCQ" name="c1" outgoing="_VLqdEJFSEeWh--vLJ1DoCQ _cRZwsJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_oUIiwZFSEeWh--vLJ1DoCQ" value="m+1">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+        <attributes xmi:id="_6b-R4JFSEeWh--vLJ1DoCQ" value="cap">
+          <type href="http://factory.org#//Conveyor/capacity"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_bV9cIJFSEeWh--vLJ1DoCQ" name="p2" incoming="_cRZwsJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Part"/>
+      </nodes>
+      <edges xmi:id="_QymLEZFSEeWh--vLJ1DoCQ" source="_PUdZIJFSEeWh--vLJ1DoCQ" target="_MqRDwZFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/to"/>
+      </edges>
+      <edges xmi:id="_VLqdEJFSEeWh--vLJ1DoCQ" source="_Rgfy4JFSEeWh--vLJ1DoCQ" target="_MqRDwZFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/from"/>
+      </edges>
+      <edges xmi:id="_cRZwsJFSEeWh--vLJ1DoCQ" source="_Rgfy4JFSEeWh--vLJ1DoCQ" target="_bV9cIJFSEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/parts"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_E9Wl8JFTEeWh--vLJ1DoCQ" name="capacity" conditionText="cap>m"/>
+    <mappings xmi:id="_MqRq0JFSEeWh--vLJ1DoCQ" origin="_MqRDwJFSEeWh--vLJ1DoCQ" image="_MqRDwZFSEeWh--vLJ1DoCQ"/>
+    <mappings xmi:id="_PUdZIZFSEeWh--vLJ1DoCQ" origin="_PUcLAJFSEeWh--vLJ1DoCQ" image="_PUdZIJFSEeWh--vLJ1DoCQ"/>
+    <mappings xmi:id="_Rgfy4ZFSEeWh--vLJ1DoCQ" origin="_RgfL0JFSEeWh--vLJ1DoCQ" image="_Rgfy4JFSEeWh--vLJ1DoCQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_XhwVQJFTEeWh--vLJ1DoCQ" name="DeletePart">
+    <parameters xmi:id="_iqiAgJFTEeWh--vLJ1DoCQ" name="np">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_Xhz_oJFTEeWh--vLJ1DoCQ" name="Lhs">
+      <nodes xmi:id="_aHzKcJFTEeWh--vLJ1DoCQ" name="c" outgoing="_dPfUIJFTEeWh--vLJ1DoCQ _fk2pAJFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_ni2aUJFTEeWh--vLJ1DoCQ" value="np">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_bqwyAJFTEeWh--vLJ1DoCQ" name="t" incoming="_dPfUIJFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Terminator"/>
+      </nodes>
+      <nodes xmi:id="_eq8lgJFTEeWh--vLJ1DoCQ" name="p" incoming="_fk2pAJFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Part"/>
+      </nodes>
+      <edges xmi:id="_dPfUIJFTEeWh--vLJ1DoCQ" source="_aHzKcJFTEeWh--vLJ1DoCQ" target="_bqwyAJFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/to"/>
+      </edges>
+      <edges xmi:id="_fk2pAJFTEeWh--vLJ1DoCQ" source="_aHzKcJFTEeWh--vLJ1DoCQ" target="_eq8lgJFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/parts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Xhz_oZFTEeWh--vLJ1DoCQ" name="Rhs">
+      <nodes xmi:id="_aHzKcZFTEeWh--vLJ1DoCQ" name="c" outgoing="_dPfUIZFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor"/>
+        <attributes xmi:id="_ni4PgJFTEeWh--vLJ1DoCQ" value="np-1">
+          <type href="http://factory.org#//Conveyor/numParts"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_bqwyAZFTEeWh--vLJ1DoCQ" name="t" incoming="_dPfUIZFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Terminator"/>
+      </nodes>
+      <edges xmi:id="_dPfUIZFTEeWh--vLJ1DoCQ" source="_aHzKcZFTEeWh--vLJ1DoCQ" target="_bqwyAZFTEeWh--vLJ1DoCQ">
+        <type href="http://factory.org#//Conveyor/to"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_aHzKcpFTEeWh--vLJ1DoCQ" origin="_aHzKcJFTEeWh--vLJ1DoCQ" image="_aHzKcZFTEeWh--vLJ1DoCQ"/>
+    <mappings xmi:id="_bqwyApFTEeWh--vLJ1DoCQ" origin="_bqwyAJFTEeWh--vLJ1DoCQ" image="_bqwyAZFTEeWh--vLJ1DoCQ"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_3wOLYJFUEeWh--vLJ1DoCQ" name="step" subUnits="_LwYvEJFKEeWh--vLJ1DoCQ _JQPM4JFSEeWh--vLJ1DoCQ _XhwVQJFTEeWh--vLJ1DoCQ"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_FyrZgJFVEeWh--vLJ1DoCQ" name="main" subUnit="_3wOLYJFUEeWh--vLJ1DoCQ"/>
+</henshin:Module>

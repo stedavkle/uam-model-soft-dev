@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Factory:Factory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Factory="http://factory.org" xmi:id="_2ar80JFJEeWh--vLJ1DoCQ">
+  <machines xsi:type="Factory:Assembler" xmi:id="_3Y6foJFJEeWh--vLJ1DoCQ"/>
+  <machines xsi:type="Factory:Terminator" xmi:id="_4IvaEJFJEeWh--vLJ1DoCQ"/>
+  <conveyors xmi:id="_5GnXkJFJEeWh--vLJ1DoCQ" capacity="2" from="_3Y6foJFJEeWh--vLJ1DoCQ" to="_4IvaEJFJEeWh--vLJ1DoCQ" numParts="2">
+    <parts xmi:id="_k4IOkJFVEeWh--vLJ1DoCQ"/>
+    <parts xmi:id="_lNy8kJFVEeWh--vLJ1DoCQ"/>
+  </conveyors>
+</Factory:Factory>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ex:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.Pacman.org" xmi:id="_7YDyYJYCEeWSAe50fnUPXw">
+  <players xsi:type="ex:Pacman" xmi:id="_TaQnIJYDEeWSAe50fnUPXw" at="_9hm40JYCEeWSAe50fnUPXw" lives="3"/>
+  <players xsi:type="ex:Ghost" xmi:id="_K9AmoJYGEeWSAe50fnUPXw" at="_L1J28JYDEeWSAe50fnUPXw"/>
+  <board xmi:id="_9hm40JYCEeWSAe50fnUPXw" adjacent="_L1J28JYDEeWSAe50fnUPXw _-cksQJYCEeWSAe50fnUPXw" id="1, 1"/>
+  <board xmi:id="_-cksQJYCEeWSAe50fnUPXw" adjacent="_L1J28JYDEeWSAe50fnUPXw _9hm40JYCEeWSAe50fnUPXw" id="1, 3"/>
+  <board xsi:type="ex:Castle" xmi:id="_L1J28JYDEeWSAe50fnUPXw" adjacent="_9hm40JYCEeWSAe50fnUPXw _-cksQJYCEeWSAe50fnUPXw" id="1, 2"/>
+</ex:Game>

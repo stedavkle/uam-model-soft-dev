@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<phils:Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:phils="http://diningPhils/1.0" xmi:id="_Hip9YOhXEeiHPol2QYxeXQ">
+  <phils xmi:id="_IaOekOhXEeiHPol2QYxeXQ" left="_NAQ1kOhXEeiHPol2QYxeXQ" right="_NdPFcOhXEeiHPol2QYxeXQ" name="Plato"/>
+  <phils xmi:id="_IytQAOhXEeiHPol2QYxeXQ" left="_NdPFcOhXEeiHPol2QYxeXQ" right="_NAQ1kOhXEeiHPol2QYxeXQ" name="Aristotle"/>
+  <forks xmi:id="_NAQ1kOhXEeiHPol2QYxeXQ"/>
+  <forks xmi:id="_NdPFcOhXEeiHPol2QYxeXQ" id="1"/>
+</phils:Table>

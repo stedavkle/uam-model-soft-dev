@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<phils:Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:phils="http://diningPhils/1.0" xsi:schemaLocation="http://diningPhils/1.0 ../metamodel/DiningPhils.ecore">
+  <phils left="//@forks.0" right="//@forks.1" name="Plato"/>
+  <phils left="//@forks.1" right="//@forks.0" holds="//@forks.1" name="Aristotle"/>
+  <forks/>
+  <forks id="1"/>
+</phils:Table>

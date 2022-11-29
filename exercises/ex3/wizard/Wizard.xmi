@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizards:Wizard
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:wizards="/ejemplo/metamodel/wizards.ecore"
+    xsi:schemaLocation="/ejemplo/metamodel/wizards.ecore wizards.ecore"
+    title="New Project"
+    initialPage="//@pages.0">
+  <pages name="Page1">
+    <buttons
+        xsi:type="wizards:NavButton"
+        label="Next"
+        targetPage="//@pages.1"/>
+    <buttons
+        xsi:type="wizards:CloseButton"
+        label="Cancel"/>
+    <textFields
+        label="Name:"
+        minLength="10"
+        maxLength="1"/>
+  </pages>
+  <pages name="Page2">
+    <checkbox
+        label="create src folder"
+        labelSelected="true"/>
+    <buttons
+        xsi:type="wizards:ReturnButton"
+        label="Back"
+        targetPage="//@pages.0"/>
+    <buttons
+        xsi:type="wizards:NavButton"
+        label="Next"
+        targetPage="//@pages.3"
+        otherTargetPage="//@pages.2"/>
+    <buttons
+        xsi:type="wizards:CloseButton"
+        label="Cancel"/>
+  </pages>
+  <pages name="Page3">
+    <buttons
+        xsi:type="wizards:ReturnButton"
+        label="Back"
+        targetPage="//@pages.1"/>
+    <buttons
+        xsi:type="wizards:CloseButton"
+        label="Finish"/>
+    <textFields
+        label="Folder:"
+        minLength="10"
+        maxLength="1"/>
+  </pages>
+  <pages name="Page4">
+    <buttons
+        xsi:type="wizards:ReturnButton"
+        label="Back"
+        targetPage="//@pages.1"/>
+    <buttons
+        xsi:type="wizards:CloseButton"
+        label="Finish"/>
+  </pages>
+</wizards:Wizard>
