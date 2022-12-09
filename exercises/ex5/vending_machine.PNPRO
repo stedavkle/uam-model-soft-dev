@@ -2,8 +2,8 @@
 <!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
   <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes>
-      <transition name="outLargebar" nservers-x="0.5" type="EXP" x="10.55" y="2.0"/>
-      <transition name="outSmallBar" nservers-x="0.5" type="EXP" x="3.55" y="19.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="10.55" y="2.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="3.55" y="19.0"/>
       <place name="twoEuro" x="10.0" y="6.0"/>
       <place name="oneEuroFiftyCent" x="10.0" y="19.0"/>
       <transition name="T7" nservers-x="0.5" type="EXP" x="10.55" y="13.0"/>
@@ -11,42 +11,44 @@
       <place name="fiftyCent" x="29.0" y="19.0"/>
       <transition name="T0" nservers-x="0.5" type="EXP" x="35.55" y="16.0"/>
       <place name="oneEuro" x="16.0" y="30.0"/>
-      <transition name="T1" nservers-x="0.5" type="EXP" x="25.55" y="25.0"/>
-      <transition name="T2" nservers-x="0.5" type="EXP" x="10.55" y="30.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="25.55" y="25.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="10.55" y="30.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.25" name="__textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.0" x="33.0" y="13.875">Put 1x 0.50€</text-box>
-      <transition name="T3" nservers-x="0.5" type="EXP" x="16.55" y="10.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="16.55" y="10.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.78125" name="copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.25" x="22.875" y="22.609375">Put 1x 0.50€</text-box>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.78125" name="copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.25" x="7.875" y="27.609375">Put 1x 0.50€</text-box>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.78125" name="copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="4.625" x="14.6875" y="7.609375">Put 1x 1€</text-box>
       <transition name="T4" nservers-x="0.5" type="EXP" x="20.55" y="19.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.6953125" name="copy_copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="5.3125" x="18.34375" y="17.0">Put 1x 1€</text-box>
-      <transition name="T5" nservers-x="0.5" type="EXP" x="24.55" y="6.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="24.55" y="6.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.78125" name="copy_copy_copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="4.625" x="22.6875" y="3.609375">Put 1x 2€</text-box>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.6953125" name="copy_copy_copy_copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="5.3125" x="37.34375" y="27.65234375">Put 1x 1€</text-box>
-      <transition name="T6" nservers-x="0.5" type="EXP" x="39.55" y="30.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="39.55" y="30.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="4.78125" name="copy_copy_copy_copy_copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.25" x="7.875" y="10.609375">Put 1x 0.50€</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="4.5" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.0" x="8.0" y="0.5">outLargeBar</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="4.5" name="copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="6.0" x="1.0" y="16.75">outSmallBar</text-box>
     </nodes>
     <edges>
-      <arc head="outLargebar" kind="INPUT" tail="twoEuro"/>
-      <arc head="outSmallBar" kind="INPUT" tail="oneEuroFiftyCent"/>
+      <arc head="T9" kind="INPUT" tail="twoEuro"/>
+      <arc head="T8" kind="INPUT" tail="oneEuroFiftyCent"/>
       <arc head="T7" kind="INPUT" tail="oneEuroFiftyCent"/>
       <arc head="twoEuro" kind="OUTPUT" tail="T7"/>
       <arc head="T0" kind="INPUT" tail="zero"/>
       <arc head="fiftyCent" kind="OUTPUT" tail="T0"/>
-      <arc head="T1" kind="INPUT" tail="fiftyCent"/>
-      <arc head="oneEuro" kind="OUTPUT" tail="T1"/>
-      <arc head="T2" kind="INPUT" tail="oneEuro"/>
-      <arc head="oneEuroFiftyCent" kind="OUTPUT" tail="T2"/>
-      <arc head="T3" kind="INPUT" tail="oneEuro"/>
-      <arc head="twoEuro" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INPUT" tail="fiftyCent"/>
+      <arc head="oneEuro" kind="OUTPUT" tail="T3"/>
+      <arc head="T5" kind="INPUT" tail="oneEuro"/>
+      <arc head="oneEuroFiftyCent" kind="OUTPUT" tail="T5"/>
+      <arc head="T6" kind="INPUT" tail="oneEuro"/>
+      <arc head="twoEuro" kind="OUTPUT" tail="T6"/>
       <arc head="T4" kind="INPUT" tail="fiftyCent"/>
       <arc head="oneEuroFiftyCent" kind="OUTPUT" tail="T4"/>
-      <arc head="T5" kind="INPUT" tail="zero"/>
-      <arc head="twoEuro" kind="OUTPUT" tail="T5"/>
-      <arc head="oneEuro" kind="OUTPUT" tail="T6"/>
-      <arc head="T6" kind="INPUT" tail="zero"/>
-      <arc head="zero" kind="OUTPUT" tail="outSmallBar"/>
-      <arc head="zero" kind="OUTPUT" tail="outLargebar"/>
+      <arc head="T2" kind="INPUT" tail="zero"/>
+      <arc head="twoEuro" kind="OUTPUT" tail="T2"/>
+      <arc head="oneEuro" kind="OUTPUT" tail="T1"/>
+      <arc head="T1" kind="INPUT" tail="zero"/>
+      <arc head="zero" kind="OUTPUT" tail="T8"/>
+      <arc head="zero" kind="OUTPUT" tail="T9"/>
     </edges>
   </gspn>
   <measures gspn-name="PT" name="Measures" simplified-UI="false">
